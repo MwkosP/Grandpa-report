@@ -31,9 +31,9 @@ RECEIVER_EMAIL = "panats639@gmail.com"  # ΣΤΑΘΕΡΟΣ ΠΑΡΑΛΗΠΤΗΣ
 # -----------------------------
 
 
-
 def greek_day_name(dt):
     return GREEK_DAYS[dt.weekday()]
+
 
 def get_history(symbol, start, end, interval="1d"):
     """
@@ -64,6 +64,7 @@ def get_history(symbol, start, end, interval="1d"):
     })
     df.set_index("Date", inplace=True)
     return df
+
 
 def weekly_report_with_plot(ticker_symbol):
     tz = pytz.timezone(TIMEZONE)
@@ -152,6 +153,7 @@ def weekly_report_with_plot(ticker_symbol):
     print(f"💾 Αποθηκεύτηκε JPEG: {filename}")
     return filename
 
+
 def send_email_with_reports(files):
     now = datetime.now()
     subject = "📊 Εβδομαδιαία Reports — Γενικός Δείκτης & Ελληνικά Πετρέλαια"
@@ -180,8 +182,7 @@ def send_email_with_reports(files):
     print(f"📩 Email στάλθηκε στο {RECEIVER_EMAIL} στις {now.strftime('%H:%M:%S')}")
 
 
-
-    def main_loop():
+def main_loop():
     tz = pytz.timezone(TIMEZONE)
     while True:
         now = datetime.now(tz)
@@ -191,9 +192,9 @@ def send_email_with_reports(files):
         file1 = weekly_report_with_plot("GD.AT")
         file2 = weekly_report_with_plot("ELPE.AT")
         if file1 and file2:
-          send_email_with_reports([file1, file2])
+            send_email_with_reports([file1, file2])
         else:
-          print("⚠️ Δεν δημιουργήθηκαν τα reports.")
+            print("⚠️ Δεν δημιουργήθηκαν τα reports.")
 
         time.sleep(60)
 

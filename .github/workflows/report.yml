@@ -2,24 +2,21 @@ name: Weekly Report
 
 on:
   schedule:
-    - cron: "53 22 * * 1"   # κάθε Δευτέρα 22:53 UTC (δηλ. Τρίτη 01:53 Ελλάδας καλοκαίρι)
-  workflow_dispatch:       # για να μπορείς να το τρέξεις χειροκίνητα από το GitHub
+    - cron: "0 23 * * 1"   # Δευτέρα 23:00 UTC = Τρίτη 02:00 Ελλάδας
+  workflow_dispatch:
 
 jobs:
-  run-report:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
+      - uses: actions/checkout@v3
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
-
+          python-version: "3.10"
       - name: Install dependencies
-        run: pip install -r requirements.txt
-
+        run: |
+          pip install -r requirements.txt
       - name: Run script
-        run: python pappous.py
+        run: |
+          python pappous.py

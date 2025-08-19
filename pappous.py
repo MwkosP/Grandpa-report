@@ -27,7 +27,7 @@ GREEK_DAYS = {
 }
 EMAIL_SENDER = os.environ.get("EMAIL_USER")
 EMAIL_PASSWORD = os.environ.get("EMAIL_PASS")
-RECEIVER_EMAIL = "panats639@gmail.com"  # ΣΤΑΘΕΡΟΣ ΠΑΡΑΛΗΠΤΗΣ
+RECEIVER_EMAIL = "georgakvagel@gmail.com"  # ΣΤΑΘΕΡΟΣ ΠΑΡΑΛΗΠΤΗΣ
 # -----------------------------
 
 
@@ -201,5 +201,6 @@ def main_loop():
 
 if __name__ == "__main__":
     main_loop()
+
 
 

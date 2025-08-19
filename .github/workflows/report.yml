@@ -2,7 +2,7 @@ name: Weekly Report
 
 on:
   schedule:
-    - cron: "15 0 * * 2"   # Κάθε Τρίτη 03:15 ώρα Ελλάδας (00:15 UTC)
+    - cron: "7 1 * * 2"   # Τρίτη 04:07 ώρα Ελλάδας (01:07 UTC)
   workflow_dispatch:
 
 jobs:

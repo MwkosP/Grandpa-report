@@ -9,7 +9,6 @@
 - Τρέχει αυτόματα κάθε εβδομάδα με **GitHub Actions**.
 
 ## 📅 Προγραμματισμός (GitHub Actions)
-Το workflow (`.github/workflows/report.yml`) είναι ρυθμισμένο να τρέχει:
-- **Κάθε Τρίτη 04:07 ώρα Ελλάδας (01:07 UTC)**  
-- Μπορείς επίσης να το τρέξεις χειροκίνητα από το GitHub → *Actions* → *Run workflow*.
+Το workflow είναι ρυθμισμένο να τρέχει:
+- **Κάθε Σάββατο 12.00 ώρα Ελλάδας **  
 <img width="2906" height="1766" alt="Ελληνικά_Πετρέλαια_report (1)" src="https://github.com/user-attachments/assets/f2dc6b1b-b34f-404a-a5c5-251894705578" />

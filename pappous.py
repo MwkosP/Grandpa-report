@@ -184,20 +184,21 @@ def send_email_with_reports(files):
 
 def main_loop():
     tz = pytz.timezone(TIMEZONE)
-    while True:
-        now = datetime.now(tz)
-        print(f"[{now}] Checking...")
+    
+    now = datetime.now(tz)
+    print(f"[{now}] Checking...")
 
-        print("📌 Δημιουργία εβδομαδιαίων reports...")
-        file1 = weekly_report_with_plot("GD.AT")
-        file2 = weekly_report_with_plot("ELPE.AT")
-        if file1 and file2:
-            send_email_with_reports([file1, file2])
-        else:
-            print("⚠️ Δεν δημιουργήθηκαν τα reports.")
+    print("📌 Δημιουργία εβδομαδιαίων reports...")
+    file1 = weekly_report_with_plot("GD.AT")
+    file2 = weekly_report_with_plot("ELPE.AT")
+    if file1 and file2:
+        send_email_with_reports([file1, file2])
+    else:
+        print("⚠️ Δεν δημιουργήθηκαν τα reports.")
 
-        time.sleep(60)
+    
 
 
 if __name__ == "__main__":
     main_loop()
+

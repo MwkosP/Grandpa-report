@@ -25,8 +25,8 @@ GREEK_DAYS = {
     5: "Σάββατο",
     6: "Κυριακή",
 }
-EMAIL_SENDER = "agapwtomimimou@gmail.com"
-EMAIL_PASSWORD = "jlxz xmkp eaxb mbwr"  # ⚠️ μην αφήνεις αληθινά στοιχεία σε κώδικα!
+EMAIL_SENDER = os.environ.get("EMAIL_USER")
+EMAIL_PASSWORD = os.environ.get("EMAIL_PASS")
 RECEIVER_EMAIL = "panats639@gmail.com"  # ΣΤΑΘΕΡΟΣ ΠΑΡΑΛΗΠΤΗΣ
 # -----------------------------
 
@@ -201,4 +201,5 @@ def main_loop():
 
 if __name__ == "__main__":
     main_loop()
+
 

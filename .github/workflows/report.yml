@@ -2,7 +2,7 @@ name: Weekly Report
 
 on:
   schedule:
-    - cron: "34 0 * * 2"   # Τρίτη 03:34 Ελλάδας (00:34 UTC)
+    - cron: "15 0 * * 2"   # Κάθε Τρίτη 03:15 ώρα Ελλάδας (00:15 UTC)
   workflow_dispatch:
 
 jobs:
@@ -18,5 +18,8 @@ jobs:
         run: |
           pip install -r requirements.txt
       - name: Run script
+        env:               # 👉 εδώ περνάμε τα secrets
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
         run: |
           python pappous.py

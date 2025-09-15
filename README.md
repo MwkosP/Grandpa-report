@@ -1,4 +1,4 @@
-# 📊 Pappous Weekly Stock Reports
+# 📊 Grandpa Weekly Stock Reports
 
 Αυτό το project δημιουργεί **εβδομαδιαία reports** (πίνακα + γράφημα) για τον Γενικό Δείκτη (GD.AT) και τα Ελληνικά Πετρέλαια (ELPE.AT), και τα στέλνει με email αυτόματα.
 
